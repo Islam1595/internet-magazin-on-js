@@ -1,292 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page__body" style="">
-    <svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol id="arrow" viewBox="0 0 8 8"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.707 7.707L1.293 6.293 3.586 4 1.293 1.707 2.707.293 6.414 4 2.707 7.707z" fill="currentColor"></path></symbol><symbol id="cart-icon" viewBox="0 0 16 16"><path d="M13 12c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2zm0 2.8a.8.8 0 1 1 .002-1.602A.8.8 0 0 1 13 14.8zM15.873 3.147a.585.585 0 0 0-.471-.246H3.694L3.156.491A.608.608 0 0 0 2.574 0H.599C.268 0 0 .286 0 .64c0 .353.268.64.599.64H2.1l1.945 8.702a.608.608 0 0 0 .582.492h9.317c.275 0 .515-.2.581-.486l1.457-6.293a.676.676 0 0 0-.11-.548zm-2.396 6.047H5.101L3.98 4.18h10.656l-1.16 5.013zM6 12c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2zm0 2.8a.8.8 0 1 1 .002-1.602A.8.8 0 0 1 6 14.8z" fill="currentColor"></path></symbol><symbol id="check-mark" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.276 4.943L6 13.22 1.724 8.943 3.61 7.058 6 9.448l6.39-6.39 1.886 1.885z" fill="currentColor"></path></symbol><symbol id="cross" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.293 16.707l-8-8 1.414-1.414 8 8-1.414 1.414z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.707 8.707l-8 8-1.414-1.414 8-8 1.414 1.414z" fill="currentColor"></path></symbol><symbol id="delivery" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 11v1h8V5H3V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035V16c0 1.089-.743 2-2 2h-1a3.001 3.001 0 0 1-6 0h-4a3.001 3.001 0 0 1-6 0H4a1 1 0 0 1-1-1v-6H1V9h7v2H5zm3 5.8a1.201 1.201 0 0 1 0 2.4 1.201 1.201 0 0 1 0-2.4zm10 0a1.201 1.201 0 0 1 0 2.4 1.201 1.201 0 0 1 0-2.4zM15 14H5v2h.765A2.99 2.99 0 0 1 8 15a2.99 2.99 0 0 1 2.235 1h5.53A2.99 2.99 0 0 1 18 15a2.99 2.99 0 0 1 2.235 1H22v-4.575l-1.711-2.929A1 1 0 0 0 19.426 8H15v6zm1-5v3h5l-1.427-2.496A.999.999 0 0 0 18.705 9H16zM0 6h8v2H0V6z" fill="currentColor"></path></symbol><symbol id="dropdown-arrow" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.293 6.707l1.414-1.414L8 8.586l3.293-3.293 1.414 1.414L8 11.414 3.293 6.707z" fill="currentColor"></path></symbol><symbol id="favorites-icon" viewBox="0 0 16 16"><path d="M8 10.593l3.005 1.778-.788-3.37 2.666-2.297-3.53-.296-1.352-3.186-1.353 3.186-3.53.296L5.785 9l-.789 3.371 3.005-1.778zm8-4.89l-4.357 3.741L12.958 15 8 12.037 3.042 15l1.315-5.556L0 5.704l5.746-.482L8 0l2.254 5.222L16 5.704z" fill="currentColor"></path></symbol><symbol id="filter-icon" viewBox="0 0 16 16"><path d="M15.606 1.4c-.133-.267-.333-.4-.6-.4H1.673c-.267 0-.467.133-.6.4-.133.2-.067.467.067.667L6.34 8.2v4.133c0 .267.133.467.4.6l2.667 1.333c.067.067.133.067.267.067s.267 0 .333-.067a.699.699 0 0 0 .333-.6V8.199l5.2-6.133c.133-.2.2-.467.067-.667l-.001.001zM9.139 7.534c-.067.133-.133.267-.133.467v4.6l-1.333-.667V8.001c0-.133-.067-.333-.133-.4l-4.4-5.267h10.467l-4.467 5.2h-.001z" fill="currentColor"></path></symbol><symbol id="grid-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 2H2v12h12V2zM0 0v16h16V0H0z" fill="currentColor"></path><path fill="currentColor" d="M4 4h3v3H4zM9 4h3v3H9zM9 9h3v3H9zM4 9h3v3H4z"></path></symbol><symbol id="instagram-icon" viewBox="0 0 16 16"><path d="M8.005 1.441c2.139 0 2.392.01 3.233.047.781.034 1.204.165 1.485.275.372.144.641.319.92.597.28.281.453.547.6.919.109.281.24.706.275 1.485.038.843.047 1.096.047 3.231s-.01 2.391-.047 3.232c-.034.781-.166 1.203-.275 1.484a2.47 2.47 0 0 1-.598.92 2.506 2.506 0 0 1-.919.6c-.281.109-.707.24-1.485.275-.844.037-1.097.047-3.233.047s-2.392-.01-3.233-.047c-.782-.035-1.204-.166-1.485-.276a2.472 2.472 0 0 1-.92-.596 2.505 2.505 0 0 1-.6-.92c-.11-.28-.24-.706-.275-1.484-.038-.844-.047-1.097-.047-3.232 0-2.134.01-2.39.047-3.231.034-.782.166-1.204.275-1.485.144-.372.32-.64.597-.919.282-.281.547-.453.92-.6.281-.11.706-.24 1.485-.275.841-.037 1.094-.047 3.233-.047zm0-1.441C5.832 0 5.56.01 4.706.047c-.85.037-1.435.175-1.942.372a3.905 3.905 0 0 0-1.42.925C.899 1.788.627 2.235.42 2.76.222 3.27.084 3.851.047 4.701.009 5.558 0 5.83 0 8.001c0 2.173.01 2.445.047 3.298.037.85.175 1.434.372 1.941.207.528.478.975.926 1.419.444.444.891.719 1.416.922.51.197 1.092.335 1.942.372.854.038 1.126.047 3.299.047 2.172 0 2.444-.01 3.298-.047.85-.037 1.435-.175 1.942-.372a3.907 3.907 0 0 0 1.416-.922c.444-.444.72-.89.923-1.416.197-.51.335-1.09.372-1.94.038-.854.047-1.126.047-3.298s-.01-2.444-.047-3.297c-.037-.85-.175-1.435-.372-1.942a3.75 3.75 0 0 0-.916-1.422 3.917 3.917 0 0 0-1.416-.922c-.51-.197-1.092-.334-1.942-.372C10.45.01 10.178 0 8.005 0z" fill="currentColor"></path><path d="M8.005 3.891a4.112 4.112 0 0 0-4.112 4.11 4.112 4.112 0 0 0 8.223 0c0-2.269-1.841-4.11-4.111-4.11zm0 6.776a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333zM13.238 3.729a.96.96 0 1 1-1.918 0 .96.96 0 0 1 1.918 0z" fill="currentColor"></path></symbol><symbol id="list-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 2H2v12h12V2zM0 0v16h16V0H0z" fill="currentColor"></path><path fill="currentColor" d="M8 4h4v2H8zM8 7h4v2H8zM8 10h4v2H8zM4 4h2v2H4zM4 7h2v2H4zM4 10h2v2H4z"></path></symbol><symbol id="location-icon" viewBox="0 0 16 16"><path d="M14.93 14.577L13.917 11.5h-1.11l.616 3H2.577l.616-3h-1.11l-1.011 3.077C.815 15.36 1.27 16 2.083 16h11.834c.813 0 1.268-.64 1.011-1.423h.001zM11.698 4.75C11.699 2.68 10.044 1 8 1S4.303 2.68 4.303 4.75c0 3.581 3.698 7.5 3.698 7.5s3.698-3.919 3.698-7.5zm-5.695.045c0-1.118.893-2.024 1.997-2.024s1.997.906 1.997 2.024c0 1.12-.894 2.025-1.997 2.025-1.103 0-1.997-.907-1.997-2.025z" fill="currentColor"></path></symbol><symbol id="logout-icon" viewBox="0 0 16 16"><path d="M6 12.333H3.333c-.4 0-.667-.267-.667-.667V4.333c0-.4.267-.667.667-.667H6c.4 0 .667-.267.667-.667S6.4 2.332 6 2.332H3.333c-1.133 0-2 .867-2 2v7.333c0 1.133.867 2 2 2H6c.4 0 .667-.267.667-.667S6.4 12.331 6 12.331v.002z" fill="currentColor"></path><path d="M14.6 8.267c.067-.133.067-.333 0-.533-.067-.067-.067-.133-.133-.2l-3.333-3.333a.644.644 0 0 0-.933 0 .644.644 0 0 0 0 .933l2.2 2.2h-6.4c-.4 0-.667.267-.667.667s.267.667.667.667h6.4l-2.2 2.2a.643.643 0 0 0 0 .933.72.72 0 0 0 .467.2.723.723 0 0 0 .467-.2l3.333-3.333c.067-.067.133-.133.133-.2l-.001-.001z" fill="currentColor"></path></symbol><symbol id="mail-icon" viewBox="0 0 16 16"><path d="M13.445 3H2.555C1.697 3 1 3.689 1 4.538v6.924C1 12.312 1.697 13 2.555 13h10.89c.858 0 1.555-.689 1.555-1.538V4.538C15 3.688 14.303 3 13.445 3zM5.912 8.628l1.246 1.076c.237.205.538.306.841.306.304 0 .605-.103.842-.306l1.246-1.076-.03.029 2.837 2.805h-9.79L5.94 8.657l-.03-.03h.002zm-3.358 2.29V5.723l2.802 2.425-2.802 2.77zm8.088-2.771l2.802-2.425v5.193l-2.802-2.768zm2.803-3.609V4.7L8.33 9.126a.533.533 0 0 1-.66 0L2.555 4.7v-.162h10.89z" fill="currentColor"></path></symbol><symbol id="minus" viewBox="0 0 10 2"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2H0V0h10v2z" fill="currentColor"></path></symbol><symbol id="payment-alfabank" viewBox="0 0 24 24"><path d="M12.502 4c1.378 0 1.81.976 2.174 1.95l3.841 10.391c.03.081.01.214-.117.262-.127.048-1.987.762-2.09.8a.2.2 0 0 1-.256-.119c-.039-.1-.811-2.211-.898-2.447H9.848c-.083.236-.865 2.352-.9 2.447a.197.197 0 0 1-.256.12l-2.09-.8a.207.207 0 0 1-.118-.263c.132-.363 3.659-9.893 3.838-10.39.35-.96.798-1.951 2.18-1.951zM6.2 21.33c-.112 0-.201.093-.201.204v2.264a.2.2 0 0 0 .2.202h12.597c.114 0 .203-.09.203-.202v-2.264a.203.203 0 0 0-.203-.203H6.201zm6.288-14.167l-1.794 5.32h3.618l-1.8-5.32h-.024z" fill="#EE2A23"></path></symbol><symbol id="payment-cash" viewBox="0 0 32 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 4h21.714v11.725H4V4z" fill="#00856E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.286 6.345H28v11.724H6.286V6.345z" fill="#21D05B"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M25.073 16.242v1.957c0 .602-1.582 1.09-3.533 1.09-1.951 0-3.533-.488-3.533-1.09v-6.257h7.066v6.253-1.953z" fill="#FF9300"></path><path fill-rule="evenodd" 
-        clip-rule="evenodd" d="M18.007 11.817c0 .603 1.582 1.091 3.533 1.091 1.951 0 3.533-.488 3.533-1.09 0-.603-1.582-1.091-3.533-1.091-1.951 0-3.533.488-3.533 1.09z" fill="#FFD900">
-    </path>
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 19.93v.004c0 .59-1.535 1.067-3.428 1.067-1.894 0-3.43-.477-3.43-1.067V15.725H20v4.206z" fill="#FF9300"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M13.143 15.725c0 .486 1.535.88 3.428.88 1.894 0 3.43-.394 3.43-.88s-1.536-.88-3.43-.88c-1.893 0-3.428.394-3.428.88z" fill="#FFD900"></path></symbol><symbol id="payment-mastercard" viewBox="0 0 32 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.466 5.716h7.042v12.568h-7.042V5.716z" fill="#FF5F00"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12.925 12c0-2.549 1.2-4.82 3.062-6.284A8.045 8.045 0 0 0 11.037 4C6.597 4 3 7.584 3 12s3.598 8 8.037 8a7.99 7.99 0 0 0 4.95-1.716A7.977 7.977 0 0 1 12.925 12z" fill="#EB001B"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M29 12c0 4.416-3.598 8-8.037 8a7.99 7.99 0 0 1-4.95-1.716A7.977 7.977 0 0 0 19.075 12c0-2.549-1.2-4.82-3.088-6.284C17.365 4.656 19.1 4 20.963 4 25.403 4 29 7.584 29 12z" fill="#F79E1B"></path></symbol><symbol id="payment-mir" viewBox="0 0 32 24"><path d="M7.562 9.181l-1.114 4.135h-.19L5.142 9.18C4.953 8.481 4.355 8 3.671 8H1v9h2.675v-5.32h.19L5.396 17H7.31l1.528-5.32h.19V17h2.675V8H9.031c-.68 0-1.279.482-1.47 1.181zM22.372 17h2.69v-2.661h2.708c1.416 0 2.622-.858 3.089-2.064H22.37V17zm-4.768-8.05l-1.883 4.37h-.19V8h-2.676v9h2.271c.598 0 1.14-.373 1.39-.95l1.883-4.366h.19V17h2.675V8h-2.27c-.599 0-1.14.373-1.39.95z" fill="#006848"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M28.036 8a2.84 2.84 0 0 1 2.001.837c.592.576.963 1.406.963 2.33 0 .19-.02.377-.05.56h-4.967c-1.683 0-3.109-1.182-3.589-2.813-.006-.018-.01-.039-.016-.06-.013-.049-.023-.102-.036-.15A4.451 4.451 0 0 1 22.247 8h5.79z" fill="#2183E4"></path></symbol><symbol id="payment-qiwi" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.834 20.53c1.76 0 3.673.591 5.797 2.401.21.185.497-.036.306-.277-2.085-2.53-3.999-3.01-5.912-3.417-2.353-.499-3.559-1.773-4.4-3.177-.173-.277-.25-.222-.25.13-.019.442.02 1.015.115 1.588h-.287c-3.348 0-6.084-2.623-6.084-5.874 0-3.233 2.717-5.875 6.084-5.875 3.349 0 6.085 2.623 6.085 5.875 0 .221-.02.461-.039.683-.44-.074-1.32-.092-1.932-.037-.23.019-.191.13-.02.148 2.01.35 3.387 1.552 3.713 3.731 0 .056.076.074.095.019a8.62 8.62 0 0 0 1.302-4.563C20.407 6.99 16.293 3 11.203 3 6.133 3 2 6.972 2 11.885c0 4.895 4.114 8.885 9.203 8.885 1.34.019 2.679-.24 4.63-.24zm.688-3.214c.402.332.536.739.326 1.016-.115.148-.306.24-.555.24a.972.972 0 0 1-.632-.222c-.363-.314-.478-.83-.23-1.108.096-.11.25-.166.44-.166.211-.019.44.074.651.24zm1.895-.85c.057.388-.077.554-.192.554-.134 0-.306-.166-.516-.461-.21-.314-.287-.665-.173-.832.058-.11.21-.166.383-.11.325.11.46.61.498.85z" fill="#F18B17"></path></symbol><symbol id="payment-sberbank" viewBox="0 0 24 24"><path d="M8.081 9.7l8.987-5.157A5.98 5.98 0 0 0 15.918 4L8.082 8.41 4.635 6.444c-.27.271-.473.543-.743.882L8.082 9.7zM18.96 5.968c-.27-.272-.54-.475-.878-.747l-10 5.7-4.797-2.714c-.135.34-.27.679-.473 1.018l5.27 2.918L18.96 5.968zM8.081 13.432l-5.608-3.257c-.068.34-.203.679-.27 1.086l5.878 3.325 12.297-6.922c-.202-.271-.405-.61-.675-.882L8.08 13.432zM22 13.092C22 18.523 17.54 23 12 23c-5.473 0-10-4.41-10-9.907v-.679l6.014 3.461L20.85 8.546C21.595 9.971 22 11.532 22 13.093z" fill="#2C9E48"></path></symbol><symbol id="payment-visa" viewBox="0 0 32 24"><path d="M15.832 8.144l-2.012 8.688h-2.425l2.038-8.688h2.4zm10.215 5.6l1.264-3.255.723 3.28h-1.987v-.024zm2.709 3.088H31l-1.96-8.688h-2.064c-.464 0-.851.239-1.032.646l-3.637 8.042h2.554l.49-1.292h3.095l.31 1.292zm-6.32-2.848c.026-2.298-3.43-2.418-3.405-3.447 0-.31.31-.646 1.032-.718.36-.048 1.315-.072 2.399.383l.413-1.819A6.577 6.577 0 0 0 20.605 8c-2.4 0-4.076 1.173-4.102 2.872-.026 1.245 1.212 1.963 2.115 2.37.929.43 1.264.718 1.264 1.077 0 .599-.774.838-1.444.862-1.213.024-1.935-.311-2.502-.55l-.439 1.914c.567.24 1.6.455 2.683.455 2.58-.024 4.23-1.197 4.256-3.016zm-10.034-5.84l-3.947 8.688H5.9l-1.96-6.941c-.104-.43-.207-.575-.542-.766-.593-.287-1.548-.574-2.399-.742l.052-.24h4.127c.542 0 .98.336 1.109.886l1.032 5.027 2.528-5.912H12.4z" fill="#2A2A6C"></path></symbol><symbol id="payment-wm" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.966 3c1.562 0 3.046.366 4.364 1.014.208.1.411.21.62.324l-.917.826-1.38-1.432-2.328 2.08-1.38-1.516-4.332 3.92 2.776 3.075-1.094.961 2.734 3.08-1.083.961 3.91 4.365 2.323-2.143 2.004 2.3c-.4.314-.833.606-1.312.878A9.86 9.86 0 0 1 11.961 23C6.473 23 2 18.51 2 13S6.478 3 11.966 3z" fill="#005299"></path><path d="M12.516 10.23l-2.368 2.14 2.133 2.377 2.368-2.14-2.133-2.378zM14.202 14.337l-2.368 2.14 2.133 2.377 2.368-2.14-2.133-2.377zM10.823 6.166l-2.368 2.14 2.132 2.378 2.368-2.14-2.132-2.378zM14.577 5.55L12.8 7.154l1.6 1.783 1.776-1.605-1.6-1.784zM17.73 12.904l-1.776 1.606 1.6 1.783 1.776-1.606-1.6-1.783zM19.292 16.506l-1.776 1.605 1.6 1.783 1.775-1.605-1.599-1.783zM19.419 8.787l-1.184 1.07 1.066 1.19 1.184-1.071-1.066-1.189zM17.907 5.252l-1.184 1.07 1.066 1.188 1.184-1.07-1.066-1.189zM20.934 12.32l-1.184 1.07 1.066 1.188L22 13.508l-1.066-1.188zM16.214 9.133l-1.776 1.605 1.6 1.783 1.776-1.605-1.6-1.783z" fill="#005299"></path></symbol><symbol id="payment-yndex" viewBox="0 0 24 24"><g opacity=".9" fill-rule="evenodd" clip-rule="evenodd"><path opacity=".9" d="M3 11.927c0-1.247.079-2.054 2.842-3.96C8.211 6.427 15.474 1 15.474 1v9.02H21V23H4.737C3.789 23 3 22.267 3 21.387v-9.46z" fill="#FFCF01"></path><path opacity=".9" d="M16.122 10.308v5.29L6.15 22.154l12.6-3.949v-7.897h-2.628z" fill="#D3AB07"></path><path opacity=".9" d="M12.05 9.775c.61-.705 1.448-.94 1.906-.548.458.392.381 1.331-.229 2.036-.61.705-1.449.94-1.906.548-.457-.391-.305-1.33.229-2.036z" fill="#000"></path></g></symbol><symbol id="payment" viewBox="0 0 24 24"><path d="M21.167 4H2.833C1.821 4 1 4.896 1 6v12c0 1.104.821 2 1.833 2h18.334C22.179 20 23 19.104 23 18V6c0-1.104-.821-2-1.833-2zm0 13.5c0 .276-.206.5-.459.5H3.292c-.253 0-.459-.224-.459-.5V11h18.334v6.5zm0-9.5H2.833V6.5c0-.276.206-.5.459-.5h17.416c.253 0 .459.224.459.5V8zm-8.25 6h-8.25v-1h8.25v1zm-2.75 2h-5.5v-1h5.5v1zm9.166-2h-2.75v-1h2.75v1z" fill="currentColor"></path></symbol><symbol id="phone-icon" viewBox="0 0 16 16"><path d="M15 12.058c0 .357-.16 1.053-.309 1.382-.209.488-.766.805-1.212 1.053-.587.319-1.184.507-1.85.507-.924 0-1.76-.377-2.604-.686a9.324 9.324 0 0 1-1.741-.825c-1.69-1.045-3.728-3.083-4.773-4.773a9.225 9.225 0 0 1-.825-1.74C1.378 6.13 1 5.296 1 4.37c0-.666.19-1.263.507-1.85.248-.447.567-1.004 1.053-1.213C2.89 1.16 3.585 1 3.942 1c.07 0 .14 0 .21.03.209.07.427.557.526.756.319.567.627 1.144.955 1.7.159.259.457.577.457.886 0 .607-1.8 1.491-1.8 2.028 0 .268.249.617.388.855 1.005 1.81 2.257 3.062 4.067 4.067.238.139.587.387.855.387.537 0 1.422-1.8 2.028-1.8.309 0 .627.3.885.458.557.329 1.134.636 1.7.955.2.099.687.318.757.527.03.07.03.139.03.209z" fill="currentColor"></path></symbol><symbol id="plus" viewBox="0 0 10 10"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 6H0V4h10v2z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4 10V0h2v10H4z" fill="currentColor"></path></symbol><symbol id="review-icon" viewBox="0 0 16 16"><path d="M6.666 1.365C9.607 1.365 12 3.307 12 5.695c0 2.069-2.02 4.302-5.284 4.302-1.053 0-1.811-.216-2.478-.382-.644.404-.837.554-2.004.936.277-1.035.241-1.488.22-2.171-.557-.683-1.12-1.41-1.12-2.686 0-2.387 2.392-4.33 5.332-4.33zm0-1.365C3.146 0 0 2.404 0 5.694c0 1.167.41 2.312 1.137 3.201.031 1.041-.568 2.535-1.108 3.622 1.446-.267 3.502-.858 4.433-1.442a9.279 9.279 0 0 0 2.254.287c3.936 0 6.617-2.753 6.617-5.668C13.333 2.386 10.166 0 6.666 0zm7.69 7.618c-.107.333-.24.655-.4.966 1.117.86 1.504 2.2.309 3.658-.014.507-.033.715.092 1.271-.595-.21-.653-.267-1.11-.554-1.418.354-2.843.474-4.06-.583-.374.108-.763.19-1.16.248 1.01 1.28 2.866 1.975 5.052 1.432.61.382 1.955.768 2.901.944-.353-.713-.745-1.69-.725-2.372 1.17-1.43 1.028-3.706-.899-5.01zM4.333 5.053a.722.722 0 0 0-.714.73c0 .404.32.73.714.73a.722.722 0 0 0 .714-.73c0-.404-.32-.73-.714-.73zm2.333 0a.722.722 0 0 0-.714.73c0 .404.32.73.714.73a.722.722 0 0 0 .714-.73c0-.404-.32-.73-.714-.73zm2.334 0a.722.722 0 0 0-.714.73c0 .404.32.73.714.73a.722.722 0 0 0 .714-.73c0-.404-.32-.73-.714-.73z" fill="currentColor"></path></symbol><symbol id="search-icon" viewBox="0 0 17 17"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M5.707 11.293a1 1 0 0 0-1.414 0l-4 4a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414z" fill="currentColor"></path></symbol><symbol id="skype-icon" viewBox="0 0 16 16"><path d="M11.296 16a4.757 4.757 0 0 1-2.024-.451c-.446.073-.83.107-1.193.107-4.23 0-7.673-3.4-7.673-7.58 0-.406.04-.83.123-1.287A4.598 4.598 0 0 1 0 4.647C0 2.085 2.11 0 4.705 0c.807 0 1.596.204 2.296.592.319-.041.667-.06 1.078-.06 2.044 0 3.963.782 5.403 2.203a7.452 7.452 0 0 1 2.237 5.342c0 .535-.037.99-.114 1.41.262.586.395 1.213.395 1.866C16 13.915 13.89 16 11.296 16zM9.47 14.244l.192.102a3.49 3.49 0 0 0 1.634.404c1.905 0 3.454-1.524 3.454-3.397 0-.531-.12-1.037-.357-1.504l-.101-.2.049-.22a6.1 6.1 0 0 0 .128-1.352c0-3.472-2.867-6.296-6.39-6.296-.44 0-.79.025-1.1.077l-.233.04-.201-.125a3.481 3.481 0 0 0-1.84-.523C2.8 1.25 1.25 2.774 1.25 4.647c0 .604.164 1.197.473 1.715l.125.209-.05.238a6.24 6.24 0 0 0-.142 1.268c0 3.49 2.881 6.33 6.423 6.33.342 0 .716-.04 1.177-.124l.214-.04zm2.561-4.53c0-.449-.088-.835-.266-1.148a2.244 2.244 0 0 0-.739-.776 4.72 4.72 0 0 0-1.122-.51c-.431-.136-.919-.262-1.45-.376-.42-.096-.725-.171-.907-.221a2.93 2.93 0 0 1-.528-.204 1.201 1.201 0 0 1-.391-.294.6.6 0 0 1-.16-.38c0-.242.162-.446.436-.624.284-.186.666-.262 1.136-.262.505 0 .875.068 1.095.234.227.17.425.415.588.724.141.242.269.41.392.518.132.116.322.168.565.168a.896.896 0 0 0 .673-.273c.179-.184.303-.396.303-.629 0-.242-.103-.492-.24-.743a2.342 2.342 0 0 0-.637-.713 3.381 3.381 0 0 0-1.082-.536c-.43-.134-.945-.2-1.531-.2-.732 0-1.38.1-1.923.3-.552.203-.981.5-1.273.879-.296.382-.47.826-.47 1.319 0 .517.166.956.448 1.306.277.345.656.62 1.127.82.46.193 1.037.365 1.718.51.5.105.905.205 1.203.297.285.088.522.217.7.383.17.158.263.36.263.618 0 .326-.17.593-.496.814-.334.227-.778.316-1.32.316-.394 0-.715-.03-.952-.143a1.44 1.44 0 0 1-.55-.422 3.251 3.251 0 0 1-.378-.664 1.468 1.468 0 0 0-.384-.559.883.883 0 0 0-.577-.212.98.98 0 0 0-.685.265.817.817 0 0 0-.273.616c0 .382.141.779.42 1.177.275.395.639.716 1.08.953.615.325 1.405.49 2.347.49.784 0 1.474-.121 2.049-.359.58-.239 1.029-.577 1.332-1.004.305-.428.459-.918.46-1.455z" fill="currentColor"></path></symbol><symbol id="social-fb" viewBox="0 0 16 16"><path d="M11.715 1.106v2.357h-1.402c-1.098 0-1.304.527-1.304 1.286v1.688h2.616l-.348 2.643H9.009v6.777H6.277V9.08H4V6.437h2.277V4.491C6.277 2.232 7.661 1 9.679 1c.964 0 1.795.071 2.036.107v-.001z" fill="currentColor"></path></symbol><symbol id="social-ok" viewBox="0 0 16 16"><path d="M7.81 8.099a4.055 4.055 0 0 1-4.054-4.045A4.057 4.057 0 0 1 7.81 0a4.057 4.057 0 0 1 4.054 4.054A4.055 4.055 0 0 1 7.81 8.099zm0-6.044a1.995 1.995 0 0 0 0 3.991 1.995 1.995 0 1 0 0-3.991zm4.67 6.535c.393.804-.054 1.188-1.071 1.848-.857.545-2.036.759-2.813.839l.652.643 2.384 2.384a.939.939 0 0 1 0 1.313l-.107.116a.949.949 0 0 1-1.321 0A524.306 524.306 0 0 0 7.82 13.34l-2.384 2.393a.939.939 0 0 1-1.313 0l-.107-.116a.922.922 0 0 1 0-1.313c.607-.607 1.473-1.482 2.384-2.384l.643-.643c-.768-.08-1.964-.286-2.83-.839-1.018-.661-1.464-1.045-1.071-1.848.232-.455.866-.839 1.705-.179 0 0 1.134.902 2.964.902s2.964-.902 2.964-.902c.839-.661 1.473-.277 1.705.179z" fill="currentColor"></path></symbol><symbol id="social-twitter" viewBox="0 0 16 16"><path d="M16 3.538a6.47 6.47 0 0 1-1.884.515 3.3 3.3 0 0 0 1.443-1.816 6.605 6.605 0 0 1-2.084.797A3.283 3.283 0 0 0 11.078 2 3.281 3.281 0 0 0 7.88 6.029a9.317 9.317 0 0 1-6.766-3.431 3.28 3.28 0 0 0-.443 1.65c0 1.137.578 2.143 1.459 2.731a3.282 3.282 0 0 1-1.487-.41v.041a3.282 3.282 0 0 0 2.634 3.218 3.287 3.287 0 0 1-1.484.056 3.294 3.294 0 0 0 3.066 2.282 6.585 6.585 0 0 1-4.863 1.36A9.284 9.284 0 0 0 5.032 15c6.037 0 9.34-5.003 9.34-9.341 0-.144-.003-.285-.01-.425A6.608 6.608 0 0 0 16 3.538z" fill="currentColor"></path></symbol><symbol id="social-vk" viewBox="0 0 16 16"><path d="M15.977 4.652c.125.337-.266 1.125-1.249 2.414-1.616 2.12-1.791 1.921-.458 3.145 1.283 1.175 1.55 1.741 1.59 1.815 0 0 .534.92-.59.928l-2.133.033c-.459.09-1.067-.32-1.067-.32-.8-.542-1.55-1.946-2.133-1.766 0 0-.6.189-.583 1.453.009.272-.125.419-.125.419s-.15.156-.441.18H7.83c-2.108.132-3.965-1.782-3.965-1.782S1.832 9.1.05 4.97C-.067 4.7.058 4.57.058 4.57s.125-.157.475-.157l2.282-.016a.88.88 0 0 1 .367.148s.133.09.2.263c.374.92.858 1.757.858 1.757.833 1.691 1.4 1.98 1.724 1.806 0 0 .424-.254.333-2.299-.034-.74-.242-1.076-.242-1.076-.191-.254-.55-.328-.708-.353-.125-.016.083-.312.358-.443.41-.197 1.133-.205 1.991-.197.675.008.867.05 1.125.107.79.188.525.911.525 2.652 0 .558-.108 1.338.3 1.593.175.115.608.016 1.674-1.774 0 0 .5-.855.891-1.848.066-.18.208-.255.208-.255s.133-.073.316-.05l2.399-.016c.725-.09.842.238.842.238l.001.003z" fill="currentColor"></path></symbol><symbol id="social-youtobe" viewBox="0 0 16 16"><path d="M6.555 9.841l3.78-1.984-3.78-2.008v3.992zM8 3.001c2.945 0 4.898.142 4.898.142.274.032.875.032 1.406.604 0 0 .43.428.555 1.412.149 1.151.14 2.302.14 2.302V8.54s.009 1.15-.14 2.301c-.125.976-.555 1.413-.555 1.413-.53.563-1.133.563-1.406.595 0 0-1.953.151-4.898.151-3.64-.032-4.757-.143-4.757-.143-.313-.056-1.016-.04-1.547-.603 0 0-.43-.437-.555-1.413C.992 9.69 1 8.54 1 8.54V7.46s-.009-1.15.14-2.3c.125-.985.555-1.413.555-1.413.53-.572 1.133-.572 1.406-.604C3.102 3.143 5.055 3 8 3z" fill="currentColor"></path></symbol><symbol id="telegram-icon" viewBox="0 0 16 16"><path d="M5.886 10.568l-.248 3.63c.355 0 .509-.16.693-.35l1.664-1.654 3.45 2.627c.632.366 1.077.173 1.248-.605l2.264-11.032c.201-.973-.338-1.353-.954-1.115L.696 7.367c-.908.367-.894.893-.154 1.132l3.402 1.1 7.902-5.142c.372-.256.71-.114.432.142l-6.392 5.969z" fill="currentColor"></path></symbol><symbol id="user-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 6.6a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8 6.6a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2zM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM12.582 13.146c.002-.003.018-.043.018-.146 0-.398-.28-1.022-1.148-1.616-.837-.573-2.058-.984-3.452-.984-1.385 0-2.605.42-3.447 1.002C3.673 12.01 3.4 12.636 3.4 13a.527.527 0 0 0 .013.12.124.124 0 0 0 .01.009c.047.043.214.156.648.256.895.206 2.207.214 3.929.214h.142c1.665 0 2.924 0 3.795-.195.432-.096.593-.207.636-.247l.01-.01s-.002.001 0-.001zm-4.318 1.853C11.455 15 14 15 14 13c0-2.056-2.686-4-6-4s-6 2-6 4c0 1.999 2.683 1.999 5.994 1.999h.27z" fill="currentColor"></path></symbol><symbol id="viber-icon" viewBox="0 0 16 16"><path d="M15.504 9.263c.477-4.015-.23-6.55-1.503-7.696h.001C11.946-.391 5.005-.681 2.545 1.655 1.441 2.797 1.052 4.474 1.01 6.549c-.042 2.076-.093 5.965 3.531 7.02h.004l-.004 1.612s-.024.653.393.784c.477.154.692-.149 2.176-1.92 2.48.215 4.385-.278 4.602-.35.5-.168 3.335-.543 3.793-4.432zm-8.15 3.648s-1.57 1.957-2.059 2.466c-.16.165-.335.15-.332-.178l.012-2.675c-3.073-.88-2.892-4.193-2.859-5.925.034-1.733.35-3.153 1.286-4.108C5.559.468 11.645.92 13.196 2.377c1.896 1.68 1.221 6.429 1.225 6.59-.39 3.247-2.686 3.453-3.109 3.593-.18.06-1.855.491-3.959.35z" fill="currentColor"></path><path d="M8.222 2.87c-.257 0-.257.4 0 .404 1.99.015 3.628 1.402 3.646 3.946 0 .268.393.265.39-.004h-.001c-.021-2.74-1.81-4.33-4.035-4.345z" fill="currentColor"></path><path d="M10.839 6.798c-.006.265.386.278.39.01.032-1.512-.9-2.757-2.65-2.888-.257-.019-.284.384-.028.403 1.518.115 2.318 1.152 2.288 2.475zM10.42 8.517c-.33-.19-.665-.072-.803.115l-.29.375c-.147.19-.422.166-.422.166C6.897 8.642 6.36 6.54 6.36 6.54s-.025-.284.16-.437l.362-.3c.18-.144.295-.49.11-.83C6.5 4.084 6.17 3.776 6 3.54c-.177-.222-.443-.272-.72-.122h-.006c-.576.337-1.207.968-1.005 1.618.344.684.977 2.867 2.994 4.516.947.78 2.447 1.58 3.084 1.764l.006.01c.628.208 1.238-.447 1.563-1.04v-.005c.145-.287.097-.559-.114-.737-.374-.365-.94-.768-1.383-1.027z" fill="currentColor"></path><path d="M8.853 5.407c.64.037.95.371.983 1.058.012.269.402.25.39-.018-.043-.897-.51-1.397-1.352-1.443-.257-.015-.28.388-.021.403z" fill="currentColor"></path></symbol><symbol id="whatsapp-icon" viewBox="0 0 16 16"><path d="M16 7.794c0 4.304-3.517 7.794-7.855 7.794a7.878 7.878 0 0 1-3.796-.969L0 16l1.418-4.183A7.715 7.715 0 0 1 .29 7.794C.291 3.489 3.807 0 8.146 0 12.484.001 16 3.49 16 7.794zM8.144 1.243c-3.64 0-6.603 2.94-6.603 6.553 0 1.433.468 2.76 1.258 3.84l-.824 2.434 2.536-.806a6.602 6.602 0 0 0 3.633 1.083c3.641 0 6.604-2.94 6.604-6.553.001-3.612-2.962-6.551-6.604-6.551zm3.967 8.346c-.049-.078-.177-.126-.369-.222-.191-.096-1.14-.558-1.315-.62-.178-.065-.306-.097-.434.094-.127.192-.496.622-.61.75-.112.128-.224.144-.416.05-.193-.097-.814-.298-1.55-.948a5.747 5.747 0 0 1-1.07-1.324c-.113-.19-.012-.294.084-.389.086-.086.192-.223.289-.335.096-.111.128-.19.192-.318s.032-.239-.016-.335c-.048-.096-.432-1.036-.593-1.418-.16-.382-.32-.319-.433-.319-.113 0-.241-.015-.37-.015a.705.705 0 0 0-.512.238c-.176.191-.674.653-.674 1.593 0 .941.69 1.848.786 1.976.097.126 1.332 2.119 3.29 2.884 1.957.764 1.957.509 2.31.477.354-.033 1.14-.462 1.3-.908.16-.447.16-.83.111-.91z" fill="currentColor"></path></symbol><symbol id="working-hours-icon" viewBox="0 0 16 16"><path d="M8 1.333A6.674 6.674 0 0 1 14.667 8 6.674 6.674 0 0 1 8 14.667 6.674 6.674 0 0 1 1.333 8 6.674 6.674 0 0 1 8 1.333zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm.667 8V4H7.333v5.333H12V8H8.667z" fill="currentColor"></path></symbol></svg>
-    <div class="page__canvas">
-<header class="header  page__header header__js" role="banner">
-  <div class="header__top">
-    <div class="header__wrapper">
-      <div class="header__row">
-        <div class="working-hours  header__working-hours">
-    <div class="working-hours__wrapper">
-      <svg class="working-hours__icon" width="16" height="16">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#working-hours-icon"></use>
-      </svg>
-      <div class="working-hours__text">Приём заказов по телефону: Пн–Пт 10:00–18:00</div>
-    </div>
-  </div>
-        <div class="account-block  header__account-block"><ul class="account-block__list">
-      <li class="account-block__item">
-        <a href="#modal-account" data-toggle="modal" class="account-block__link">
-          <svg class="account-block__icon" width="16" height="16">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user-icon"></use>
-          </svg>
-          <span class="account-block__text">Личный кабинет</span>
-        </a>
-      </li>
-    </ul></div>
-        <div class="favorites-block  header__favorites-block">
-  <a href="https://abcnuts.ru/wishlist/?707091" class="favorites-block__link" title="Избранное">
-    <svg class="favorites-block__icon" width="16" height="16">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#favorites-icon"></use>
-    </svg>
-    <span class="favorites-block__text" id="show_wishlist">0</span>
-  </a>
-</div>
-        <div id="show_cart" class="cart-block  header__cart-block  js_show_cart"><a class="cart-block__link" href="https://abcnuts.ru/catalog/cart/?500836">
-  <svg class="cart-block__icon" width="18" height="18">
-    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cart-icon"></use>
-  </svg><div class="cart-block__empty">Корзина</div></a></div>
-      </div>
-    </div>
-  </div>
-  <div class="header__bottom">
-    <div class="header__wrapper">
-      <div class="header__row">
-        <div class="header__logo">
-          <div class="logo  " style="max-width: 245px"><img src="https://abcnuts.ru/userfls/logo/logo.jpg" alt="Abcnuts.ru - Азбука здорового питания"></div>
-          <div class="header__description"><br>Азбука здорового питания</div>
-        </div>
-<div class="search-block  header__search-block">
-  <form action="https://abcnuts.ru/search/" class="search_form" method="get">
-    <input type="hidden" name="module" value="search">
-    <label class="search-block__label" for="searchword">Поиск по каталогу</label>
-    <input class="search-block__input" id="searchword" type="text" name="searchword" value="" placeholder="Поиск по каталогу">
-    <button class="search-block__button" aria-label="поиск">
-      <svg class="search-block__icon" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search-icon"></use></svg>
-    </button>
-  </form></div>
-        <div class="header__calls">
-          <div class="messengers-block  header__messengers">
-    <ul class="messengers-block__list"><li class="messengers-block__item  messengers-block__item--whatsapp">
-        <a href="https://wa.me/79169754269" class="messengers-block__link" target="_blank" rel="noopener noreferrer">
-          <svg class="messengers-block__icon" width="18" height="18">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#whatsapp-icon"></use>
-          </svg>
-          Whatsapp
-        </a>
-      </li><li class="messengers-block__item  messengers-block__item--telegram">
-        <a href="tg://resolve?domain=abcnuts" class="messengers-block__link" rel="noopener noreferrer">
-          <svg class="messengers-block__icon" width="18" height="18">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#telegram-icon"></use>
-          </svg>
-          Telegram
-        </a>
-      </li></ul>
-  </div>
-          <button class="button  button--size_s  button--view_inverse  header__callback" data-target="#callback" data-toggle="modal">Заказать звонок</button>
-          <div class="phone  header__phone">
-    <svg class="phone__icon" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-icon"></use></svg>
-    <ul class="phone__list"><li class="phone__item">
-      <a class="phone__link" href="tel:+74994441512">+7(499)444-15-12</a>
-    </li></ul>
-  </div>
+<body class="page__body">
+  <div class="wrapper">
+    <header class="header  page__header header__js" role="banner">
+      <div class="header__top">
+        <div class="header__wrapper">
+          <div class="header__row">
+            <div class="working-hours  header__working-hours">
+              <div class="working-hours__wrapper">
+                <svg class="working-hours__icon" width="16" height="16">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#working-hours-icon"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="account-block  header__account-block">
+              <ul class="account-block__list">
+                <li class="account-block__item">
+                  <a href="#modal-account" data-toggle="modal" class="account-block__link">
+                    <svg class="account-block__icon" width="16" height="16">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user-icon"></use>
+                    </svg>
+                <div class="cart-block__empty">Корзина</div>
+              </a></div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <nav class="menu-main  header__menu-main">
-  <div class="menu-main__wrapper"><ul class="menu-main__list"><li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/catalog/"><span class="menu-main__text">Каталог</span><svg class="menu-main__arrow" width="16" height="16">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dropdown-arrow"></use>
-    </svg></a><ul class="menu-main__list-sub">
-        <li class="menu-main__item-sub">
-            <a class="menu-main__link-sub" href="https://abcnuts.ru/novogodnie-podarki/">
-                <span class="menu-main__text-sub">Подарочные наборы</span>
-            </a></li>
-            <li class="menu-main__item-sub">
-                <a class="menu-main__link-sub" href="https://abcnuts.ru/orekhi/">
+      <div class="header__bottom">
+        <div class="header__wrapper">
+          <div class="header__row">
+            <div class="header__logo">
+              <div class="logo  " style="max-width: 245px"><img src="https://abcnuts.ru/userfls/logo/logo.jpg"
+                  alt="Abcnuts.ru - Азбука здорового питания"></div>
+              <div class="header__description"><br>Азбука здорового питания</div>
+            </div>
+            <div class="search-block  header__search-block">
+              <form action="https://abcnuts.ru/search/" class="search_form" method="get">
+                <input type="hidden" name="module" value="search">
+                <label class="search-block__label" for="searchword">Поиск по каталогу</label>
+                <input class="search-block__input" id="searchword" type="text" name="searchword" value=""
+                  placeholder="Поиск по каталогу">
+                <button class="search-block__button" aria-label="поиск">
+                  <svg class="search-block__icon" width="16" height="16">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search-icon"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+      <nav class="menu-main  header__menu-main">
+        <div class="menu-main__wrapper">
+          <ul class="menu-main__list">
+            <li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/catalog/"><span
+                  class="menu-main__text">Каталог</span><svg class="menu-main__arrow" width="16" height="16">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dropdown-arrow"></use>
+                </svg></a>
+              <ul class="menu-main__list-sub">
+                <li class="menu-main__item-sub">
+                  <a class="menu-main__link-sub" href="https://abcnuts.ru/novogodnie-podarki/">
+                    <span class="menu-main__text-sub">Подарочные наборы</span>
+                  </a>
+                </li>
+                <li class="menu-main__item-sub">
+                  <a class="menu-main__link-sub" href="https://abcnuts.ru/orekhi/">
                     <span class="menu-main__text-sub">Орехи и семечки</span>
-                </a>
-            </li>
-            <li class="menu-main__item-sub">
-                <a class="menu-main__link-sub" href="https://abcnuts.ru/sukhofrukty/">
+                  </a>
+                </li>
+                <li class="menu-main__item-sub">
+                  <a class="menu-main__link-sub" href="https://abcnuts.ru/sukhofrukty/">
                     <span class="menu-main__text-sub">Сухофрукты</span>
-                </a></li>
-                <li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/chay-i-kofe/"><span class="menu-main__text-sub">Чай и кофе</span></a></li><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/sol-sakhar-i-spetsii/"><span class="menu-main__text-sub">Специи и пряности</span></a></li><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/fruktovye-chipsy/"><span class="menu-main__text-sub">Фруктовые чипсы</span></a></li><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/sladkoe/"><span class="menu-main__text-sub">Сладости и напитки</span></a></li><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/bio-produkt/"><span class="menu-main__text-sub">Здоровый образ жизни</span></a></li><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/tsukaty/"><span class="menu-main__text-sub">Цукаты</span></a></li><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/catalog/aktsii/"><span class="menu-main__text-sub">Акции и скидки</span></a></li><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/catalog/vse-po-5-kg/"><span class="menu-main__text-sub">Все по 5 кг</span></a></li><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/vse-po-100-gramm/"><span class="menu-main__text-sub">Все по 100 грамм</span></a></li></ul></li><li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/about/"><span class="menu-main__text">О нас</span><svg class="menu-main__arrow" width="16" height="16">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dropdown-arrow"></use>
-    </svg></a><ul class="menu-main__list-sub" style="display: none; opacity: 0;"><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/kontakty/"><span class="menu-main__text-sub">Контакты</span></a></li><li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/garantiya/"><span class="menu-main__text-sub">Гарантия</span></a></li></ul></li><li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/delivery/"><span class="menu-main__text">Доставка и самовывоз</span></a></li><li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/payment/"><span class="menu-main__text">Оплата</span></a></li><li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/novosti/"><span class="menu-main__text">Новости</span></a></li></ul>
-  </div>
-</nav>
-</header>
-  <div class="content">
-      <div class="items">
-          <div class="content_item">
-              <div class="title"></div>
-              <div class="image">
-                  <img src="" alt="">
-              </div>
-              <div class="button">
-                  Купить товар
-              </div>
-          </div>
-      </div>
-  </div>
-  <footer class="footer  page__footer" role="contentinfo">
-    <div class="footer__top">
-      <div class="footer__wrapper">
-        <div class="footer__row">
-          <div class="contacts-block  footer__contacts-block">
-            <ul class="contacts-block__list">
-              <li class="contacts-block__item  "><svg class="contacts-block__icon" width="16" height="16">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#location-icon"></use>
-      </svg><div class="contacts-block__text">Москва п. Сосенское, 22-й км Калужского шоссе, здание №10</div>
-  </li>
-              <li class="contacts-block__item  "><svg class="contacts-block__icon" width="16" height="16">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-icon"></use>
-    </svg><div class="contacts-block__text"><a href="tel:+74994441512">+7(499)444-15-12</a></div></li>
-              <li class="contacts-block__item  "><svg class="contacts-block__icon" width="16" height="16">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mail-icon"></use>
-      </svg><div class="contacts-block__text">info@abcnuts.ru</div>
-  </li>
-            </ul>
-          </div>
-          <nav class="menu-footer  footer__menu-footer">
-  <ul class="menu-footer__list"><li class="menu-footer__item"><a class="menu-footer__link  link" href="https://abcnuts.ru/about/">О нас</a></li><li class="menu-footer__item"><a class="menu-footer__link  link" href="https://abcnuts.ru/delivery/">Доставка и самовывоз</a></li><li class="menu-footer__item"><a class="menu-footer__link  link" href="https://abcnuts.ru/payment/">Оплата</a></li><li class="menu-footer__item"><a class="menu-footer__link  link" href="https://abcnuts.ru/garantiya/">Гарантия</a></li><li class="menu-footer__item"><a class="menu-footer__link  link" href="https://abcnuts.ru/novosti/">Новости</a></li><li class="menu-footer__item"><a class="menu-footer__link  link" href="https://abcnuts.ru/kontakty/">Контакты</a></li><li class="menu-footer__item"><a class="menu-footer__link  link" href="https://abcnuts.ru/kak-nadolgo-sokhranit-sukhofrukty-i-orekhi/">Условия хранения</a></li></ul>
-</nav>
-          <div class="footer__social-block">
-            <div class="social-block  ">
-    <h2 class="social-block__title">Оставайтесь на связи</h2>
-    <ul class="social-block__list"><li class="social-block__item  social-block__item--vk">
-        <a href="https://vk.com/abcnuts" class="social-block__link" target="_blank" rel="noopener noreferrer">
-          <svg class="social-block__icon" width="16" height="16">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-vk"></use>
-          </svg>
-          Вконтакте
-        </a>
-      </li>
-      <li class="social-block__item  social-block__item--fb">
-        <a href="https://www.facebook.com/abcnuts.ru" class="social-block__link" target="_blank" rel="noopener noreferrer">
-          <svg class="social-block__icon" width="16" height="16">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-fb"></use>
-          </svg>
-          Facebook
-        </a>
-      </li>
-      <li class="social-block__item  social-block__item--instagram">
-        <a href="https://instagram.com/abcnuts.ru" class="social-block__link" target="_blank" rel="noopener noreferrer">
-          <svg class="social-block__icon" width="16" height="16">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram-icon"></use>
-          </svg>
-          Instagram
-        </a>
-      </li>
-    </ul>
-  </div>
-          </div>
+                  </a>
+                </li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub"
+                    href="https://abcnuts.ru/chay-i-kofe/"><span class="menu-main__text-sub">Чай и кофе</span></a></li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub"
+                    href="https://abcnuts.ru/sol-sakhar-i-spetsii/"><span class="menu-main__text-sub">Специи и
+                      пряности</span></a></li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub"
+                    href="https://abcnuts.ru/fruktovye-chipsy/"><span class="menu-main__text-sub">Фруктовые
+                      чипсы</span></a></li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/sladkoe/"><span
+                      class="menu-main__text-sub">Сладости и напитки</span></a></li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub"
+                    href="https://abcnuts.ru/bio-produkt/"><span class="menu-main__text-sub">Здоровый образ
+                      жизни</span></a></li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/tsukaty/"><span
+                      class="menu-main__text-sub">Цукаты</span></a></li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub"
+                    href="https://abcnuts.ru/catalog/aktsii/"><span class="menu-main__text-sub">Акции и
+                      скидки</span></a></li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub"
+                    href="https://abcnuts.ru/catalog/vse-po-5-kg/"><span class="menu-main__text-sub">Все по 5
+                      кг</span></a></li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub"
+                    href="https://abcnuts.ru/vse-po-100-gramm/"><span class="menu-main__text-sub">Все по 100
+                      грамм</span></a></li>
+              </ul>
+            </li>
+            <li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/about/"><span
+                  class="menu-main__text">О нас</span><svg class="menu-main__arrow" width="16" height="16">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dropdown-arrow"></use>
+                </svg></a>
+              <ul class="menu-main__list-sub" style="display: none; opacity: 0;">
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub" href="https://abcnuts.ru/kontakty/"><span
+                      class="menu-main__text-sub">Контакты</span></a></li>
+                <li class="menu-main__item-sub"><a class="menu-main__link-sub"
+                    href="https://abcnuts.ru/garantiya/"><span class="menu-main__text-sub">Гарантия</span></a></li>
+              </ul>
+            </li>
+            <li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/delivery/"><span
+                  class="menu-main__text">Доставка и самовывоз</span></a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/payment/"><span
+                  class="menu-main__text">Оплата</span></a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="https://abcnuts.ru/novosti/"><span
+                  class="menu-main__text">Новости</span></a></li>
+          </ul>
         </div>
-        <a href="#" class="to-top  footer__to-top" id="toTop" style="display: none;">
-          <div class="to-up__arrow"></div>
-        </a>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="container"> 
+      <div class="сontent__items">
+        <div class="content_item">
+          <div class="content__image">
+            <img src="image/908_podarochnyy-nabor-1-22.jpg" alt="">
+          </div>
+          <div class="content__text">
+          подарочный набор #1-22 1 199 руб
+          </div>
+          <a class="content__button">
+            Купить товар
+          </a>
+        </div>
+        <div class="content__item">
+          <div class="content__image">
+            <img src="image/853_novogodniy-nabor-iz-orekhov-.jpg" alt="">
+          </div>
+          <div class="content__text">
+            Новогодний набор из орехов и сухофруктов #4 (Большой)
+          </div>
+          <a class="content__button">
+            Купить товар
+          </a>
+        </div>
+        <div class="content__item">
+          <div class="content__image">
+            <img src="image/858_novogodniy-nabor-iz-orekhov-.jpg" alt="Ошибка!">
+          </div>
+          <div class="content__text">
+            Новогодний набор из орехов и сухофруктов #5 1320 руб
+          </div>
+          <a class="content__button">
+            Купить товар
+          </a>
+        </div>
+        <div class="content__item">
+          <div class="content__image">
+            <img src="image/859_novogodniy-nabor-iz-orekhov-.jpg" alt="Ошибка!">
+          </div>
+          <div class="content__text">
+            Новогодний набор из орехов и сухофруктов #6 1628 руб
+          </div>
+            <a class="content__button">
+            Купить товар
+          </a>
+        </div>
+        <div class="content___item">
+          <div class="content__image">
+            <img src="image/903_podarochnyy-nabor-4-22.jpg" alt="Ошибка!">
+          </div>  
+          <div class="content__text">
+            Подарочный набор # -22 1 122 руб
+          </div>
+          <a class="content__button">
+            Купить товар
+          </a>
+        </div>
+        <div class="content___item">
+          <div class="content__image">
+            <img src="image/903_podarochnyy-nabor-4-22.jpg" alt="Ошибка!">
+          </div>  
+          <div class="content__text">
+            Подарочный набор # 4-22 1 122 руб
+          </div>
+          <a class="content__button">
+            Купить товар
+          </a>
+        </div>
+        <div class="content____item">
+          <div class="content__image">
+            <img src="image/905_podarochnyy-nabor-2-22.jpg" alt="Ошибка!">
+          </div>  
+          <div class="content__text">
+            Подарочный набор # 2-22 1229 руб
+          </div>
+          <a class="content__button">
+            Купить товар
+          </a>
+        </div>
+        <div class="content__item">
+          <div class="content__image">
+            <img src="image/909_finiki-korolevskie-podaroch.jpg" alt="">
+          </div>  
+          <div class="content__text">
+            Финики королевские подарочные(1 кг) 1430 руб
+          </div>
+          <a class="content__button">
+            Купить товар
+          </a>
+        </div>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="footer__wrapper">
-        <div class="footer__row">
-          <div class="footer__copyright">
-            2022&nbsp;©&nbsp;«ABCnuts» – азбука здорового питания
+    </div>
+    <footer class="footer  page__footer" role="contentinfo">
+      <div class="footer__top">
+        <div class="footer__wrapper">
+          <div class="footer__row">
+            <div class="contacts-block  footer__contacts-block">
+              <ul class="contacts-block__list">
+                <li class="contacts-block__item  "><svg class="contacts-block__icon" width="16" height="16">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#location-icon"></use>
+                  </svg>
+                  <div class="contacts-block__text">Москва п. Сосенское, 22-й км Калужского шоссе, здание №10</div>
+                </li>
+                <li class="contacts-block__item  "><svg class="contacts-block__icon" width="16" height="16">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-icon"></use>
+                  </svg>
+                  <div class="contacts-block__text"><a href="tel:+74994441512">+7(499)444-15-12</a></div>
+                </li>
+                <li class="contacts-block__item  "><svg class="contacts-block__icon" width="16" height="16">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mail-icon"></use>
+                  </svg>
+                  <div class="contacts-block__text">info@abcnuts.ru</div>
+                </li>
+              </ul>
+            </div>
+            <nav class="menu-footer  footer__menu-footer">
+              <ul class="menu-footer__list">
+                <li class="menu-footer__item"><a class="menu-footer__link  link" href="https://abcnuts.ru/about/">О
+                    нас</a></li>
+                <li class="menu-footer__item"><a class="menu-footer__link  link"
+                    href="https://abcnuts.ru/delivery/">Доставка и самовывоз</a></li>
+                <li class="menu-footer__item"><a class="menu-footer__link  link"
+                    href="https://abcnuts.ru/payment/">Оплата</a></li>
+                <li class="menu-footer__item"><a class="menu-footer__link  link"
+                    href="https://abcnuts.ru/garantiya/">Гарантия</a></li>
+                <li class="menu-footer__item"><a class="menu-footer__link  link"
+                    href="https://abcnuts.ru/novosti/">Новости</a></li>
+                <li class="menu-footer__item"><a class="menu-footer__link  link"
+                    href="https://abcnuts.ru/kontakty/">Контакты</a></li>
+                <li class="menu-footer__item"><a class="menu-footer__link  link"
+                    href="https://abcnuts.ru/kak-nadolgo-sokhranit-sukhofrukty-i-orekhi/">Условия хранения</a></li>
+              </ul>
+            </nav>
+            <div class="footer__social-block">
+              <div class="social-block  ">
+                <h2 class="social-block__title">Оставайтесь на связи</h2>
+                <ul class="social-block__list">
+                  <li class="social-block__item  social-block__item--vk">
+                    <a href="https://vk.com/abcnuts" class="social-block__link" target="_blank"
+                      rel="noopener noreferrer">
+                      <svg class="social-block__icon" width="16" height="16">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </a>
+                  </li>
+                  <li class="social-block__item  social-block__item--fb">
+                    <a href="https://www.facebook.com/abcnuts.ru" class="social-block__link" target="_blank"
+                      rel="noopener noreferrer">
+                      <svg class="social-block__icon" width="16" height="16">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-fb"></use>
+                      </svg>
+                      Facebook
+                    </a>
+                  </li>
+                  <li class="social-block__item  social-block__item--instagram">
+                    <a href="https://instagram.com/abcnuts.ru" class="social-block__link" target="_blank"
+                      rel="noopener noreferrer">
+                      <svg class="social-block__icon" width="16" height="16">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram-icon"></use>
+                      </svg>
+                      Instagram
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-		  <div style="margin:auto"><a href="https://clck.yandex.ru/redir/dtype=stred/pid=47/cid=73582/path=dynamic.150x101/*https://market.yandex.ru/shop--abcnuts/647105/reviews"> <img src="https://clck.yandex.ru/redir/dtype=stred/pid=47/cid=73581/path=dynamic.150x101/*https://grade.market.yandex.ru/?id=647105&amp;action=image&amp;size=2" border="0" alt="Читайте отзывы покупателей и оценивайте качество магазина ABCnuts на Яндекс.Маркете"> </a></div>
-          <div class="footer__payments-block">
-            <div class="payments-block  ">
-    <h2 class="visually-hidden">Принимаем к оплате</h2>
-    <ul class="payments-block__list"><li class="payments-block__item">
-        <svg width="32" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-cash"></use></svg>
-        наличные
-      </li>
-      <li class="payments-block__item">
-        <svg width="32" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-mastercard"></use></svg>
-        mastercard
-      </li>
-      <li class="payments-block__item">
-        <svg width="32" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-visa"></use></svg>
-        visa
-      </li><li class="payments-block__item">
-        <svg width="32" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-mir"></use></svg>
-        мир
-      </li><li class="payments-block__item">
-        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-alfabank"></use></svg>
-        альфабанк
-      </li><li class="payments-block__item">
-        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-sberbank"></use></svg>
-        сбербанка
-      </li></ul>
-  </div>
+          <a href="#" class="to-top  footer__to-top" id="toTop" style="display: none;">
+            <div class="to-up__arrow"></div>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__wrapper">
+          <div class="footer__row">
+            <div class="footer__copyright">
+              2022&nbsp;©&nbsp;«ABCnuts» – азбука здорового питания
+            </div>
+            <div style="margin:auto"><a
+                href="https://clck.yandex.ru/redir/dtype=stred/pid=47/cid=73582/path=dynamic.150x101/*https://market.yandex.ru/shop--abcnuts/647105/reviews">
+                <img
+                  src="https://clck.yandex.ru/redir/dtype=stred/pid=47/cid=73581/path=dynamic.150x101/*https://grade.market.yandex.ru/?id=647105&amp;action=image&amp;size=2"
+                  border="0" alt="Читайте отзывы покупателей и оценивайте качество магазина ABCnuts на Яндекс.Маркете">
+              </a></div>
+            <div class="footer__payments-block">
+              <div class="payments-block  ">
+                <h2 class="visually-hidden">Принимаем к оплате</h2>
+                <ul class="payments-block__list">
+                  <li class="payments-block__item">
+                    <svg width="32" height="24">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-cash"></use>
+                    </svg>
+                    наличные
+                  </li>
+                  <li class="payments-block__item">
+                    <svg width="32" height="24">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-mastercard"></use>
+                    </svg>
+                    mastercard
+                  </li>
+                  <li class="payments-block__item">
+                    <svg width="32" height="24">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-visa"></use>
+                    </svg>
+                    visa
+                  </li>
+                  <li class="payments-block__item">
+                    <svg width="32" height="24">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-mir"></use>
+                    </svg>
+                    мир
+                  </li>
+                  <li class="payments-block__item">
+                    <svg width="24" height="24">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-alfabank"></use>
+                    </svg>
+                    альфабанк
+                  </li>
+                  <li class="payments-block__item">
+                    <svg width="24" height="24">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#payment-sberbank"></use>
+                    </svg>
+                    сбербанка
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-</footer>
-		<script async="" src="https://mc.yandex.ru/metrika/tag.js"></script><script async="" src="https://mc.yandex.ru/metrika/tag.js"></script><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" charset="UTF-8"></script>
-		<script type="text/javascript" src="https://abcnuts.ru/js/jquery.form.min.js" charset="UTF-8"></script>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" charset="UTF-8"></script>
-		<script type="text/javascript" src="https://abcnuts.ru/js/timepicker.js" charset="UTF-8"></script><script type="text/javascript">
-	jQuery(function(e){
-	e.datepicker.setDefaults(e.datepicker.regional["ru"]);
-	e.timepicker.setDefaults(e.timepicker.regional["ru"]);
-	});
-</script>
-<script type="text/javascript" src="https://abcnuts.ru/js/jquery.scrollTo.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="https://abcnuts.ru/cache/js/ae76c164bb7250436bd8a4bce10b7b8d.js" charset="UTF-8"></script>
-<script type="text/javascript" src="https://abcnuts.ru/js/jquery.touchSwipe.min.js" charset="UTF-8"></script>
-<script src="https://abcnuts.ru/cache/js/129b46de254b5eb9df6d2d722f1a36b5.js"></script><script type="text/javascript" src="https://abcnuts.ru/cache/js/8939367d16b952b11f047040165fc1c1.js" charset="UTF-8"></script><script type="text/javascript" src="https://abcnuts.ru/js/jquery.cookie.min.js" charset="UTF-8"></script>
-	<script asyncsrc="" type="text/javascript" charset="UTF-8"></script>
-		<script type="text/javascript" asyncsrc=""></script>
-		<script type="text/javascript" asyncsrc=""></script>
-		<script type="text/javascript" asyncsrc=""></script>
-		<script type="text/javascript" asyncsrc=""></script>
-		<script type="text/javascript" asyncsrc=""></script>
-		<script type="text/javascript" asyncsrc=""></script>
-<noscript><div><img src="https://abcnuts.ru/visitors/counter/?watch=no_script&data-312491aa=15734E74EE481D1EB319C9C78B72A2155501" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(65518030, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/65518030" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<script src="https://abcnuts.ru/custom/my/js/hc-offcanvas-nav.js"></script>
-<script src="https://abcnuts.ru/custom/my/js/jquery.flextabs.min.js"></script>
-<script src="https://abcnuts.ru/js/hoverIntent.js"></script>
-<script src="https://abcnuts.ru/custom/my/js/js.cookie.js"></script>
-<script src="https://abcnuts.ru/custom/my/js/slick.min.js"></script>
-<script src="https://abcnuts.ru/custom/my/js/jquery.ui.touch-punch.min.js"></script>
-<script src="https://abcnuts.ru/custom/my/js/svg4everybody.min.js"></script>
-<script src="https://abcnuts.ru/custom/my/js/script.min.js"></script>
-<script src="https://abcnuts.ru/custom/my/js/custom_js.js"></script>
-		<script type="text/javascript">
-		(function(){ var widget_id = 'PXpeYcrX4L';var d=document;var w=window;function l(){
-		var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
-
-<script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-   ym(65518030, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/65518030" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    </div><nav class="hc-offcanvas-nav hc-nav-1 nav-levels-overlap nav-position-left disable-body"><div class="nav-container" style=""><div class="nav-wrapper nav-wrapper-0"><div class="nav-content">
-<div id="jivo-iframe-container" style="opacity: 0; visibility: hidden; width: 0px; height: 0px; overflow: hidden;"><iframe src="javascript:void(0)" allow="autoplay" title="Jivochat" name="jivo_container" id="jivo_container" frameborder="no"></iframe></div><jdiv><jdiv class="globalClass_e906"><jdiv style="animation: 300ms cubic-bezier(0.39, 0.24, 0.21, 0.99) 0s 1 normal both running Label_CLOSE_WIDGET_e34d; display: block; z-index: 2147483646; position: fixed;"><jdiv class="label_b209 _bottom_a1f5 notranslate" id="jvlabelWrap" 
-    style="background: linear-gradient(95deg, rgb(47, 50, 74) 20%, rgb(66, 72, 103) 80%); right: 30px; bottom: 0px;">
-    <jdiv class="labelStatus_fe1c" style="background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%200h20v20H0z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20stroke%3D%22%23F0F1F1%22%20stroke-width%3D%221.5%22%20d%3D%22M3%203h14a2%202%200%200%201%202%202v10a2%202%200%200%201-2%202H3a2%202%200%200%201-2-2V5a2%202%200%200%201%202-2z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20stroke%3D%22%23F0F1F1%22%20stroke-width%3D%221.5%22%20d%3D%22M16.074%207.064l-6.01%204.01-6.01-4.01%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A&quot;);"></jdiv><jdiv class="hoverl_c4ca"></jdiv><jdiv class="text_c1ae _offline_dc84 contentTransitionWrap_de7f" style="font-size: 15px; font-family: Arial, Arial; font-style: normal; color: rgb(240, 241, 241);">Отправьте нам сообщение</jdiv><jdiv class="copy_c72c"><jdiv class="logo_e6f7 _bottom_aa9e"><jdiv class="hoverBox_ca53"></jdiv><jdiv class="logoIcon_b64f __ru_a643" style="background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225.688%22%20height%3D%2218%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23F0F1F1%22%20d%3D%22M7.155%205.93H6.134a.4.4%200%2000-.287.128.378.378%200%2000-.123.268v7.448a.377.377%200%2000.123.28.389.389%200%2000.287.12h1.021a.382.382%200%2000.274-.12.353.353%200%2000.131-.28V6.33a.375.375%200%2000-.131-.268.353.353%200%2000-.274-.132zm9.313.02h-.824a.557.557%200%2000-.57.228l-2.353%205.04h-.041l-2.242-5.04a.379.379%200%2000-.369-.228H8.958a.356.356%200%2000-.328.14.289.289%200%2000.021.32l3.648%207.748a.376.376%200%2000.369.208h.111a.373.373%200%2000.348-.208l3.648-7.748a.288.288%200%2000.021-.32.368.368%200%2000-.328-.14zm4.935-.188a4.312%204.312%200%2000-4.3%204.276%204.212%204.212%200%20001.254%203.044%204.11%204.11%200%20003.038%201.284%204.069%204.069%200%20003.025-1.284%204.181%204.181%200%20001.262-3.044%204.313%204.313%200%2000-4.279-4.276zm1.783%206.156a2.379%202.379%200%2001-1.783.756%202.4%202.4%200%2001-1.8-.744%202.623%202.623%200%2001-.725-1.888%202.529%202.529%200%2001.725-1.84%202.427%202.427%200%20011.8-.736%202.368%202.368%200%20011.783.736%202.525%202.525%200%2001.725%201.84%202.669%202.669%200%2001-.725%201.876zM3.322%205.93H.416a.392.392%200%2000-.275.128.373.373%200%2000-.131.272v1a.386.386%200%2000.131.28.4.4%200%2000.275.12h1.475v7.17a1.331%201.331%200%2001-1.18%201.312H.416a.4.4%200%2000-.287.12.371.371%200%2000-.123.28v1a.415.415%200%2000.111.28.394.394%200%2000.295.12h.143a3.13%203.13%200%20003.152-2.9.848.848%200%2000.017-.188V6.33a.377.377%200%2000-.123-.28.365.365%200%2000-.279-.12z%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%2362666c%22%20d%3D%22M.03-.006c-.254%204.676%203.681%205.34%203.681%205.34C3.515.214.03-.006.03-.006z%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E&quot;);"></jdiv><jdiv class="fallback_d580"></jdiv></jdiv></jdiv><jdiv class="leafCont_e5ec"><jdiv class="leaf_e356 _bottom_b504"><jdiv class="cssLeaf_dfdb" style="background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2240%22%20viewBox%3D%220%200%2032%2040%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23424867%22%20d%3D%22M0%200h9.02L32%2033.196V40H0z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23424867%22%20d%3D%22M9%200c3.581.05%2023%205.426%2023%2033.08v.03C18.922%2030.751%209%2019.311%209%205.554V0z%22%20fill-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%235e5f61%22%20d%3D%22M9%200c3.581.05%2023%205.426%2023%2033.08v.03C18.922%2030.751%209%2019.311%209%205.554V0z%22%20fill-opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A&quot;);"></jdiv></jdiv></jdiv><jdiv class="copyContainer_fcf5"><jdiv class="copyright_b8fe _bottom_ba40 __ru_c62e" style="background: linear-gradient(95deg, rgb(47, 50, 74) 20%, rgb(66, 72, 103) 80%);"><jdiv class="text_b182" style="color: rgb(240, 241, 241);"><a href="https://www.jivo.ru/i_sa/?utm_source=abcnuts.ru&amp;utm_medium=link&amp;utm_content=label_tooltip&amp;utm_campaign=from_widget" rel="nofollow noopener" target="_blank" class="link_c503 __ru_c62e">Бизнес-мессенджер <jdiv class="logoIcon_bfa5" style="background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225.688%22%20height%3D%2218%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23F0F1F1%22%20d%3D%22M7.155%205.93H6.134a.4.4%200%2000-.287.128.378.378%200%2000-.123.268v7.448a.377.377%200%2000.123.28.389.389%200%2000.287.12h1.021a.382.382%200%2000.274-.12.353.353%200%2000.131-.28V6.33a.375.375%200%2000-.131-.268.353.353%200%2000-.274-.132zm9.313.02h-.824a.557.557%200%2000-.57.228l-2.353%205.04h-.041l-2.242-5.04a.379.379%200%2000-.369-.228H8.958a.356.356%200%2000-.328.14.289.289%200%2000.021.32l3.648%207.748a.376.376%200%2000.369.208h.111a.373.373%200%2000.348-.208l3.648-7.748a.288.288%200%2000.021-.32.368.368%200%2000-.328-.14zm4.935-.188a4.312%204.312%200%2000-4.3%204.276%204.212%204.212%200%20001.254%203.044%204.11%204.11%200%20003.038%201.284%204.069%204.069%200%20003.025-1.284%204.181%204.181%200%20001.262-3.044%204.313%204.313%200%2000-4.279-4.276zm1.783%206.156a2.379%202.379%200%2001-1.783.756%202.4%202.4%200%2001-1.8-.744%202.623%202.623%200%2001-.725-1.888%202.529%202.529%200%2001.725-1.84%202.427%202.427%200%20011.8-.736%202.368%202.368%200%20011.783.736%202.525%202.525%200%2001.725%201.84%202.669%202.669%200%2001-.725%201.876zM3.322%205.93H.416a.392.392%200%2000-.275.128.373.373%200%2000-.131.272v1a.386.386%200%2000.131.28.4.4%200%2000.275.12h1.475v7.17a1.331%201.331%200%2001-1.18%201.312H.416a.4.4%200%2000-.287.12.371.371%200%2000-.123.28v1a.415.415%200%2000.111.28.394.394%200%2000.295.12h.143a3.13%203.13%200%20003.152-2.9.848.848%200%2000.017-.188V6.33a.377.377%200%2000-.123-.28.365.365%200%2000-.279-.12z%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%2362666c%22%20d%3D%22M.03-.006c-.254%204.676%203.681%205.34%203.681%205.34C3.515.214.03-.006.03-.006z%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E&quot;);"></jdiv></a></jdiv><jdiv class="corner_a12d" style="border-top-color: rgb(66, 72, 103);"></jdiv></jdiv></jdiv></jdiv></jdiv><jdiv id="jivo-player" class="player_f368"><audio preload="auto" id="jivo-sound-agent_message"><source src="https://code.jivo.ru/sounds/agent_message.mp3" type="audio/mpeg"><source src="https://code.jivo.ru/sounds/agent_message.ogg" type="audio/ogg; codecs=vorbis"><source src="https://code.jivo.ru/sounds/agent_message.wav" type="audio/wav"></audio><audio preload="auto" id="jivo-sound-notification"><source src="https://code.jivo.ru/sounds/notification.mp3" type="audio/mpeg"><source src="https://code.jivo.ru/sounds/notification.ogg" type="audio/ogg; codecs=vorbis"><source src="https://code.jivo.ru/sounds/notification.wav" type="audio/wav"></audio><audio preload="auto" id="jivo-sound-outgoing_message">
-        <source src="https://code.jivo.ru/sounds/outgoing_message.mp3" type="audio/mpeg"><source src="https://code.jivo.ru/sounds/outgoing_message.ogg" type="audio/ogg; codecs=vorbis"><source src="https://code.jivo.ru/sounds/outgoing_message.wav" type="audio/wav"></audio></jdiv><jdiv id="jcont" style="animation: 300ms cubic-bezier(0.39, 0.24, 0.21, 0.99) 0s 1 normal both running WidgetContainer_CLOSE_WIDGET_d747; --right:30px; --height:496px; position: fixed; display: block; --labelwidth:338px; --labelright:30px;"><jdiv class="wrap_ad86" dir="ltr" id="jivo_action"><jdiv class="closeButton_da4e" id="jivo_close_button"><jdiv class="closeIcon_d8f5" style="background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2028%2028%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20transform%3D%22translate(2%202)%22%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFF%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212.75%22%20stroke%3D%22%23222D38%22%20stroke-width%3D%221.5%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cg%20fill%3D%22%23222D38%22%20opacity%3D%221%22%20transform%3D%22translate(6%206)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22rotate(45%206.24%206.01)%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22scale(-1%201)%20rotate(45%200%20-9.058)%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A&quot;);"></jdiv></jdiv></jdiv><jdiv class="contentWrapper_b40a"></jdiv></jdiv><jdiv class="pseudoHeight_c194"></jdiv><jdiv class="jivoMouseTrack_e656"></jdiv></jdiv></jdiv></body>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
 </html>
